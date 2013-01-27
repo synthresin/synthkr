@@ -24,6 +24,9 @@ body, html {width:100%; height:100%;}
 
 ul, ol {list-style-type: none;}
 
+
+
+
 .app-wrapper {
 	width:100%;
 	height:100%;
@@ -87,64 +90,98 @@ ul, ol {list-style-type: none;}
 
 			@extend .depth-1-wrapper;
 
-			
-
-			.post-list {
+			.post-list-wrapper { 
+				width: 261px; margin:0; 
 				position:fixed;
-				left:150px;
-				padding-top:16px;
-				overflow:auto;
-				width:240px;
+				left:150px; top:0;
 				height:100%;
 				background: $postlist_color;
-				border-right:1px solid $postlist_bar_color;
 
-				a {
-					position: relative;
-					display: block;
-					width:175px;
-					height:52px;
-					border-bottom:1px solid $postlist_bar_color;
-					text-decoration: none;
-					padding:10px;
-					padding-top:10px;
-					padding-right:55px;
-					
+				.scrollbar{ 
+					background: red;
+					position: relative; background-position: 0 0; right:30px;
+					float: right; width: 0px; 
+					z-index:20;
 
-					h3 {
-						font-size:$postlist_title_size;
-						color:$postlist_title_color;
-						line-height:$postlist_title_line_height_size;
+					.track { 
+						height: 100%; width:0px; 
+						position: relative; padding: 0 1px; 
+						z-index: 30;
 
-					}
+						.thumb { 
+							background: gray;
+							height: 20px; width: 10px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; }
+							z-index: 40;
 
-					p.date {
-						font-size:11px;
-						font-color:#b3b1b1;
-						padding-top:2px;
-						color: #b3b1b1;
-					}
-
-					.arrow {
-						position: absolute;
-						right:10px; top:29px;
-						width:8px; height:14px;
-						background: url(post-list-selector.png) no-repeat;
 					}
 				}
 
-				a.active {
-					background:#4d5761;
+				.viewport { 
+					width: 240px; height: 100%; 
+					overflow: hidden; position: relative;
+					border-right:1px solid $postlist_bar_color;
+					z-index:10;
 
-					h3 {
-						color:white;
-					}
+					.post-list {
 
-					.arrow {
-						background-position: -8px 0;
+						position: absolute; left: 0; top: 0; padding: 0; margin: 0;
+						
+
+						a {
+							position: relative;
+							display: block;
+							width:175px;
+							height:52px;
+							border-bottom:1px solid $postlist_bar_color;
+							text-decoration: none;
+							padding:10px;
+							padding-top:10px;
+							padding-right:55px;
+							
+
+							h3 {
+								font-size:$postlist_title_size;
+								color:$postlist_title_color;
+								line-height:$postlist_title_line_height_size;
+
+							}
+
+							p.date {
+								font-size:11px;
+								font-color:#b3b1b1;
+								padding-top:2px;
+								color: #b3b1b1;
+							}
+
+							.arrow {
+								position: absolute;
+								right:10px; top:29px;
+								width:8px; height:14px;
+								background: url(post-list-selector.png) no-repeat;
+							}
+						}
+
+						a.active {
+							background:#4d5761;
+
+							h3 {
+								color:white;
+							}
+
+							.arrow {
+								background-position: -8px 0;
+							}
+						}
 					}
 				}
 			}
+			 
+			
+
+			
+			.post-list-wrapper .disable { display: none; }
+
+			
 
 			.post {
 				position: absolute;
