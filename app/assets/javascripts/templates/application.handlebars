@@ -1,5 +1,14 @@
-<h1>Application</h1>
-
-<p>Your content here.</p>
-
-{{outlet}}
+<nav class="global-header">
+	<nav class="gnb">
+		<ul>
+			<li>{{#linkTo "posts"}}blog{{/linkTo}}</li>
+		</ul>
+	</nav>
+	<p class="copyright">
+		2013 synthresin<br/>
+		All rights reserved
+	</p>
+</nav>
+<div class="depth-1-wrapper">
+	{{outlet}}
+</div>

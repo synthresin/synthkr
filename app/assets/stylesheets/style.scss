@@ -1,0 +1,170 @@
+// declare variables
+
+$header_color: #192a34;
+$gnb_color: #5f6f78;
+$gnb_bar_color: #2d3940;
+$copyright_color:#8d979e;
+$postlist_color:#fcfcfa;
+$postlist_bar_color:#f2f1f0;
+$postlist_title_size:13px;
+$postlist_title_line_height_size:17px;
+$postlist_title_color:#495054;
+
+@mixin left($dist) {
+  float: left;
+  margin-left: $dist;
+}
+
+@mixin right($dist) {
+  float: right;
+  margin-right: $dist;
+}
+
+body, html {width:100%; height:100%;}
+
+ul, ol {list-style-type: none;}
+
+.app-wrapper {
+	width:100%;
+	height:100%;
+
+	.global-header {
+
+		position:fixed;
+		background: $header_color;
+		left:0;
+		top:0;
+		bottom:0;
+		width:150px;
+		color: $copyright_color;
+		font-family: "Arial", "Helvetica", sans-serif;
+
+		.gnb {
+			position: absolute;
+			top:48px; left:10px;
+
+
+			a {
+				display: block;
+				width:130px;
+				height:40px;
+				text-align: right;
+				color: $gnb_color;
+				border-bottom: 1px solid $gnb_bar_color;
+				text-decoration: none;
+				font-size:22px;
+				line-height:40px;
+			}
+
+			a.active {
+				color:white;	
+			}
+
+		}
+
+		.copyright {
+
+			position:absolute;
+			text-align: right;
+			right:10px; bottom:10px;
+			font-size:10px;
+			line-height:13px;
+
+		}
+	
+	} //.global-header end
+
+	.depth-1-wrapper {
+
+		position: fixed;
+		right:0; top:0;
+		bottom:0; left:150px;
+
+		overflow:auto;
+		overflow-x:hidden;
+
+		.depth-1 {
+
+			@extend .depth-1-wrapper;
+
+			
+
+			.post-list {
+				position:fixed;
+				left:150px;
+				padding-top:16px;
+				overflow:auto;
+				width:240px;
+				height:100%;
+				background: $postlist_color;
+				border-right:1px solid $postlist_bar_color;
+
+				a {
+					position: relative;
+					display: block;
+					width:175px;
+					height:52px;
+					border-bottom:1px solid $postlist_bar_color;
+					text-decoration: none;
+					padding:10px;
+					padding-top:10px;
+					padding-right:55px;
+					
+
+					h3 {
+						font-size:$postlist_title_size;
+						color:$postlist_title_color;
+						line-height:$postlist_title_line_height_size;
+
+					}
+
+					p.date {
+						font-size:11px;
+						font-color:#b3b1b1;
+						padding-top:2px;
+						color: #b3b1b1;
+					}
+
+					.arrow {
+						position: absolute;
+						right:10px; top:29px;
+						width:8px; height:14px;
+						background: url(post-list-selector.png) no-repeat;
+					}
+				}
+
+				a.active {
+					background:#4d5761;
+
+					h3 {
+						color:white;
+					}
+
+					.arrow {
+						background-position: -8px 0;
+					}
+				}
+			}
+
+			.post {
+				position: absolute;
+				right:0; top:0;
+				left:241px;
+				width:630px;
+				background:yellow;
+			}
+
+		}
+
+	}
+
+
+
+} //.app-wrapper end
+
+
+
+
+
+
+
