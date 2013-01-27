@@ -11,6 +11,7 @@ $postlist_title_line_height_size:17px;
 $postlist_title_color:#495054;
 $post_title_color: #3d4b54;
 $post_content_color:#535353;
+$english_font_familty:"Arial", "Helvetica", sans-serif;
 $hangul_font_familty: "Apple SD Gothic Neo", "Nanum Gothic", sans-serif;
 @mixin left($dist) {
   float: left;
@@ -127,6 +128,7 @@ ul, ol {list-style-type: none;}
 						font-size:11px;
 						padding-top:2px;
 						color: #b3b1b1;
+						font-family: $english_font_familty;
 					}
 
 					.arrow {
@@ -170,6 +172,7 @@ ul, ol {list-style-type: none;}
 					font-size:11px;
 					padding-top:4px;
 					color: #b3b1b1;
+					font-family: $english_font_familty;
 				}
 
 				hr {
