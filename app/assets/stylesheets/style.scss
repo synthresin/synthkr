@@ -9,7 +9,9 @@ $postlist_bar_color:#f2f1f0;
 $postlist_title_size:13px;
 $postlist_title_line_height_size:17px;
 $postlist_title_color:#495054;
-
+$post_title_color: #3d4b54;
+$post_content_color:#535353;
+$hangul_font_familty: "Apple SD Gothic Neo", "Nanum Gothic", sans-serif;
 @mixin left($dist) {
   float: left;
   margin-left: $dist;
@@ -87,6 +89,8 @@ ul, ol {list-style-type: none;}
 
 			@extend .depth-1-wrapper;
 
+			//background:rgb(103, 112, 117);
+
 			
 
 			.post-list {
@@ -115,12 +119,12 @@ ul, ol {list-style-type: none;}
 						font-size:$postlist_title_size;
 						color:$postlist_title_color;
 						line-height:$postlist_title_line_height_size;
+						font-family: $hangul_font_familty;
 
 					}
 
 					p.date {
 						font-size:11px;
-						font-color:#b3b1b1;
 						padding-top:2px;
 						color: #b3b1b1;
 					}
@@ -150,8 +154,39 @@ ul, ol {list-style-type: none;}
 				position: absolute;
 				right:0; top:0;
 				left:241px;
-				width:630px;
-				background:yellow;
+				width:609px;
+				min-height:100%;
+				padding:21px;
+				padding-top:39px;
+				background :white;
+
+				h1 {
+					color:$post_title_color;
+					font-size:18px;
+					font-family: $hangul_font_familty;
+				}
+
+				.date {
+					font-size:11px;
+					padding-top:4px;
+					color: #b3b1b1;
+				}
+
+				hr {
+					border-top: 1px solid $postlist_bar_color;
+				}
+
+				.post-content {
+					color:$post_content_color;
+					font-size:13px;
+					line-height:23px;
+					font-family: $hangul_font_familty;
+
+					p {
+						margin-bottom:16px;
+					}
+				}
+
 			}
 
 		}
