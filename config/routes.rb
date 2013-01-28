@@ -1,6 +1,7 @@
 Synthkr::Application.routes.draw do
   get "assets/index"
 
+  resources :posts
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
