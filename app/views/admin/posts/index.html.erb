@@ -3,7 +3,7 @@
 	<% @posts.each do |post| %>
 	<tr>
 		<td><%= link_to post.title, admin_post_path(post) %><%=  %></td>
-		<td class="del">삭제</td>
+		<td class="del"><%= link_to '삭제', admin_post_path(post), :confirm => '정말로 삭제하시겠습니까?',:method => :delete %></td>
 	</tr>
 	<% end %>
 </table>

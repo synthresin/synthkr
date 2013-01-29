@@ -1,1 +1,16 @@
-edit.html.erb
+<h1>Posts</h1>
+<h3>포스트 수정</h3>
+<%= form_for [:admin, @post] do |f| %>
+<div>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+</div>
+<div>
+	<%= f.label :content %>
+	<%= f.text_area :content %>
+</div>
+<div>
+	<%= f.submit "올리기", :class=> 'btn'%>
+</div>
+
+<% end %>
