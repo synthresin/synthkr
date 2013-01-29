@@ -1,9 +1,11 @@
 class Admin::PostsController < ApplicationController
+
+	layout 'admin'
+
 	def index
-		render :text => 'post index'
+		
 	end
 
 	def show
-		render :text =>'#{params[:id]}'
 	end
 end
