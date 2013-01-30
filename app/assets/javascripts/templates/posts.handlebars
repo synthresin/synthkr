@@ -2,7 +2,7 @@
 			{{#linkTo posts.new }}으앙{{/linkTo}}
 		</div>
 		<ul class="post-list"><!-- 이거 오버-->
-			{{#each post in content}}
+			{{#each post in controller}}
 			<li>
 				{{#linkTo posts.post post }}
 					<h3>{{ post.title }}</h3>
