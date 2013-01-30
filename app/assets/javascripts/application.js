@@ -18,4 +18,3 @@
 //= require_self
 //= require app
 App = Ember.Application.create();
-//= require_tree .

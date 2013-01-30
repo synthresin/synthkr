@@ -7,9 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="navbar-static-top">
-		<div class="container">
-			<%= link_to "Posts", admin_posts_path %>
+	<div class="navbar navbar-static-top navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li><%= link_to "Posts", admin_posts_path %></li>
+				</ul>
+				
+			</div>
 		</div>
 	</div>
 	<div class="container">
