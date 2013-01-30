@@ -8,7 +8,7 @@ $postlist_color:#fcfcfc;
 $postlist_bar_color:#f7f5f5;
 $postlist_title_size:13px;
 $postlist_title_line_height_size:17px;
-$postlist_title_color:#917f7e;
+$postlist_title_color:#6e6e6e;
 $post_title_color: #3d4b54;
 $post_content_color:#535353;
 $english_font_familty:"Arial", "Helvetica", sans-serif;
@@ -134,7 +134,7 @@ ul, ol {list-style-type: none;}
 					p.date {
 						font-size:11px;
 						padding-top:2px;
-						color: #f5b5b3;
+						color: #ccc;
 						font-family: $english_font_familty;
 					}
 
@@ -147,7 +147,7 @@ ul, ol {list-style-type: none;}
 				}
 
 				a.active {
-					background:#fff7f7;
+					background:#f7f7f7;
 				}
 			}
 
