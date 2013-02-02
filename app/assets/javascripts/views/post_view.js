@@ -1,3 +1,3 @@
-App.PostsPostView = Ember.View.extend({
+App.PostView = Ember.View.extend({
 	 classNames: ['post']
 });
