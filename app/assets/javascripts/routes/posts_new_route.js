@@ -1,5 +1,9 @@
 App.PostsNewRoute = Ember.Route.extend({
-	model: function() {
-		return null;
+	enter: function(manager) {
+		console.log('들어감');
+	},
+
+	exit :function() {
+		console.log('나감');
 	}
 });

@@ -1,0 +1,1 @@
+App.PostsNewController = Em.ObjectController.extend();
