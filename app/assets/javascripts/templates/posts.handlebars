@@ -2,14 +2,16 @@
 			{{#linkTo posts.new }}으앙{{/linkTo}}
 		</div>
 		<ul class="post-list"><!-- 이거 오버-->
-			{{#each post in controller}}
-			<li>
-				{{#linkTo post post }}
-					<h3>{{ post.title }}</h3>
-					<p class="date">2013/01/13</p>
-					<div class="arrow"></div>
-				{{/linkTo}}
-			</li>
+			{{#each controller}}
+				{{#unless isNew}}
+				<li>
+					{{#linkTo post this }}
+						<h3>{{ title }}</h3>
+						<p class="date">2013/01/13</p>
+						<div class="arrow"></div>
+					{{/linkTo}}
+				</li>
+				{{/unless}}
 			{{/each}}
 		</ul>
 		{{outlet}}

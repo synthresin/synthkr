@@ -1,3 +1,6 @@
 App.PostsNewView = Ember.View.extend({
-	 classNames: ['post']
+	 classNames: ['post'],
+	 didInsertElement: function() {
+
+	 }
 });

@@ -1,5 +1,8 @@
-새글 제목
+{{view Ember.TextField valueBinding="title" id="title" placeholder="게시물 제목" required="true"}}
 <hr>
 <div class="post-content">
-	새글 컨텐츠
+	{{view Ember.TextArea valueBinding="body" id="body" placeholder="게시물 내용"}}
 </div>
+<button {{action "save"}}>저장 버튼</button>
+{&quot;post&quot;=&gt;{&quot;title&quot;=&gt;&quot;제목이당&quot;,
+ &quot;body&quot;=&gt;&quot;내용이당&quot;}}
