@@ -11,6 +11,15 @@ App.PostsNewRoute = Ember.Route.extend({
 		});
 
 		return post;
-	}
+	},
+
+	deactivate: function() {
+
+		var newModel = this.modelFor("posts.new");
+		
+		if (!newModel.get('isSaving')) {
+			newModel.get("transaction").rollback();
+		}
+  }
 
 });
