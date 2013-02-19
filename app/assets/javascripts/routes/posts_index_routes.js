@@ -1,7 +1,6 @@
 App.PostsIndexRoute = Ember.Route.extend({
 	model: function() {
 		return App.Post.find();
-		
 	},
 
 	redirect: function() {
@@ -9,4 +8,3 @@ App.PostsIndexRoute = Ember.Route.extend({
 		this.transitionTo('post', post);
 	}
 });
-	
